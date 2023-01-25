@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AIImagine</title>
+    <script src="client.js"></script>
+</head>
+<body>
+<h2>DALL·E Image Generator</h2>
+<form id="dalle-form">
+    <label for="prompt">Enter your prompt:</label>
+    <ul>
+        <li>make sure to download your images! they are gone once you leave the page or generate a new one</li>
+        <li>right click your images and click "Save image as..." to download</li>
+        <li>price per image is $0.05</li>
+        <li>prompts containing inappropriate subject matter will not be generated</li>
+    </ul>
+    <textarea id="prompt" name="prompt"></textarea>
+    <br>
+    <button id = "submit" type="submit">Submit to DALL·E</button>
+</form>
+<button id="payment-button" onclick="showPaymentRequest()">Pay</button>
+<p id = "load">Generating.....</p>
+<div id="image-container">
+    <img src="/woof.jpg" alt="AI image will replace this" width="1024" height="1024">
+</div>
+</body>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: aliceblue;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#image-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {
+    margin: 10px;
+}
+</style>
+</html>
